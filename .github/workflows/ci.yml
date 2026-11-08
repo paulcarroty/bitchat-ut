@@ -42,8 +42,8 @@ jobs:
         run: |
           npm ci
           npx tauri build
-          chmod +x target/release/bundle/appimage/*.AppImage
-          target/release/bundle/appimage/*.AppImage --appimage-extract
+          chmod +x /__w/bitchat-ut/bitchat-ut/target/release/bundle/appimage/bitchat*.AppImage
+          /__w/bitchat-ut/bitchat-ut/target/release/bundle/appimage/bitchat*.AppImage --appimage-extract
           tar cfvz squashfs-root.tar.gz squashfs-root
 
 
