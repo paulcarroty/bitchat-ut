@@ -42,6 +42,9 @@ jobs:
         run: |
           npm ci
           npx tauri build
+          chmod +x target/release/bundle/appimage/*.AppImage
+          target/release/bundle/appimage/*.AppImage --appimage-extract
+          tar cfvz squashfs-root.tar.gz squashfs-root
 
 
       - name: Upload Linux Artifacts
@@ -51,5 +54,6 @@ jobs:
           path: |
             target/release/bundle/deb/*.deb
             target/release/bundle/appimage/*.AppImage
+            squashfs-root.tar.gz
           if-no-files-found: error
-          
+          archive: false
