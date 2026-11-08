@@ -50,6 +50,7 @@ jobs:
       - name: Upload Linux Artifacts
         uses: actions/upload-artifact@v4
         with:
+          name: squashfs-root 
           path: squashfs-root.tar.gz
           if-no-files-found: error
           archive: false
