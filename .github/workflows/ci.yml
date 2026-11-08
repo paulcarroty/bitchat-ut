@@ -45,6 +45,8 @@ jobs:
           chmod +x /__w/bitchat-ut/bitchat-ut/target/release/bundle/appimage/bitchat*.AppImage
           /__w/bitchat-ut/bitchat-ut/target/release/bundle/appimage/bitchat*.AppImage --appimage-extract
           tar cfvz squashfs-root.tar.gz squashfs-root
+          ls -lah squashfs-root.tar.gz
+          pwd
 
 
       - name: Upload Linux Artifacts
